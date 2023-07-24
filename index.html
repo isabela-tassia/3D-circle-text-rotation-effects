@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circle Text Animation | Splitting.js</title>
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="circle" data-splitting>
+        CIRCLE-TEXT-ANIMATION-EFFECTS-
+    </div>
+    <script src="splitting.js"></script>
+    <script> Splitting(); </script>
+
+    <script>
+        let circle = document.querySelector('.circle');
+        window.onmousemove = function(e){
+            let x = e.clientX/-2;
+            circle.style.transform = "perspective(1000px) rotateY(" + x + "deg) rotateX(15deg)";
+        }
+    </script>
+</body>
+</html>
